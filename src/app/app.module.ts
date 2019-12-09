@@ -6,12 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
+import { BuyerModule } from './buyer/buyer.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
    
   ],
   imports: [
@@ -19,7 +20,8 @@ import { AuthModule } from './auth/auth.module';
     AppRoutingModule,
     AuthModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BuyerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
