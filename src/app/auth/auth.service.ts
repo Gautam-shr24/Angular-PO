@@ -17,13 +17,6 @@ export class AuthService {
     
 
   }
-  // body: HttpParams = new HttpParams();
-  //   this.body.append('grant_type', 'password');
-  //   this.body = this.body.append('username', userName);
-  //   this.body = this.body.append('password', password);
-
-
-
 
   validateUser(userEmail:any,userPass:any):Observable<any>{
     console.log(userEmail+" "+userPass+"Yooooo");

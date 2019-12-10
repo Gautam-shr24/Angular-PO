@@ -5,20 +5,22 @@
      
         <div class="form-group">
     <label>Select Products :</label>
-    <select class="form-control" name="items"  >
-           <option value="">Select your products</option>
-              <option *ngFor="let p of productArray">{{p.productName}}</option>
+    <select class="form-control" name="items" [(ngModel)]="pro" name="pro">
+           <option value="0">Select your products</option>
+              <option *ngFor="let p of productArray" [value]="p.productId">{{p.productName}}</option>
    </select>
    </div>
    <br/>
    <div class="form-group">
    <label>Select Quantity :</label>
-    <input type="number"  class="form-control" placeholder="Quantity" id="quantity" />
+    <input type="number"  class="form-control" name="quantity" placeholder="Quantity" id="quantity" [(ngModel)]="quantity">
     </div><br/>
     <div class="form-group">
-    <input type="button" value="Add" class="btn btn-success add-row" (click)="onAdd()"/>
+    <input type="button" value="Add" class="btn btn-dark add-row" (click)="onAdd()"/>
     </div>
+    </form>
     
+    <h3>Selected Products</h3>
     
     <table class="table-responsive table-dark table table-hover">
             <thead>
@@ -29,20 +31,27 @@
                 </tr>
             </thead>
             <tbody>
-                <td></td>
+                    <tr *ngFor="let arr of productsArrToDisplay;let i=index">
+                            <th><input type="checkbox" name="record" [(ngModel)]="arr.isSelected"></th>
+                            <th>{{arr.productName}}</th>
+                            <th>{{arr.quantity}}</th>
+                        </tr>
             
             </tbody>
               </table>
                 <div class="row">
                 <div class="col">	
-                <button type="button" class="delete-row">Delete Row</button>
+                <button type="button" class="btn btn-dark" (click)="deleteRow()">Delete Row</button>
                 </div>		
-                <div class="col"><input type="button" value="Raise PO" class="btn btn-primary" id="purchaseOrder"/></div>
+                <div class="col">
+                    <input type="button" value="Raise PO" class="btn btn-dark" 
+                    
+                    id="purchaseOrder"/></div>
             </div>
     
         
 
 
-</form>
+
 </div>
 

@@ -7,6 +7,7 @@ import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { BuyerModule } from './buyer/buyer.module';
+import { VendorModule } from './vendor/vendor.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { BuyerModule } from './buyer/buyer.module';
     AuthModule,
     ReactiveFormsModule,
     FormsModule,
-    BuyerModule
+    BuyerModule,
+    VendorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

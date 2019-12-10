@@ -49,7 +49,7 @@ onSubmitValidate()
         this.router.navigate(['./buyerPage']);
       }
       else if(data=='Vendor'){
-        this.router.navigate(['./']);
+        this.router.navigate(['vendorPage']);
       }
       else
       {
