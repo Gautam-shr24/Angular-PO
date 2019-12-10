@@ -12,7 +12,7 @@ import { BuyerModule } from './buyer/buyer.module';
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents,
+    routingComponents
    
   ],
   imports: [

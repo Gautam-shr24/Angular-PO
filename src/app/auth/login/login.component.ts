@@ -41,7 +41,7 @@ onSubmitValidate()
   this.authService.validateUser(this.loginForm.value.userEmail,this.loginForm.value.userPass).subscribe(
     data=>{
       
-      alert(data);
+      alert("Hello" +data);
       if(data == 'Seller'){
       this.router.navigate(['./']);
       }
