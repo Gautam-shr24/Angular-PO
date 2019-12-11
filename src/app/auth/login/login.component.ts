@@ -45,15 +45,15 @@ onSubmitValidate()
       sessionStorage.setItem("uObj",JSON.stringify(userObj));    //session 
       console.log(userObj.role);
       if(userObj.role=="Seller"){
-        alert(userObj.role);
+        
       this.router.navigate(['./']);
       }
       else if(userObj.role=="Buyer"){
-        alert(userObj.role);
+        
         this.router.navigate(['./buyerPage']);
       }
       else if(userObj.role=="Vendor"){
-        alert(userObj.role);
+        
         this.router.navigate(['./vendorPage']);
       }
       else

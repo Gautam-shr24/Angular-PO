@@ -52,8 +52,13 @@ export class RaisePOComponent implements OnInit {
 
 
   RaisePo(){
-    console.log( this.productsArrToDisplay);
-    this.buyerService.raisePoForm(this.productsArrToDisplay).
-    subscribe(data => console.log(this.productsArrToDisplay));
+
+   // console.log(sessionStorage.getItem("uObj"));
+    let obj=JSON.parse(sessionStorage.getItem("uObj"));  
+    let uId=obj.userId;
+    console.log( this.productsArrToDisplay+" "+uId);
+    this.buyerService.raisePoForm(this.productsArrToDisplay,uId).
+    subscribe(data => console.log("Value Added" +this.productsArrToDisplay));
+    window.location.reload(true);
   }
 }

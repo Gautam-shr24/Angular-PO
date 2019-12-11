@@ -1,24 +1,47 @@
+<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/home">Purchase Order Management</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/">Home</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/login" *ngIf="router.url==='/'||router.url==='/login'">LogIn</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/register" *ngIf="router.url==='/'||router.url==='/register'">Register</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/RaisePo" *ngIf="router.url==='/buyerPage'||router.url==='/RaisePo'"> Raise
+        Purchase Order</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/viewAll" *ngIf="router.url==='/buyerPage'||router.url==='/viewAll'"> View All
+        Products</a>
+    </li>
 
-<nav class="navbar navbar-expand-sm bg-secondary navbar-dark"  *ngIf="flag==false &&  logged==undefined">
-    <ul class="navbar-nav">
-            <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" routerLink="/home" >Purchase Order Management</a>
-           </li>
-        <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/" >Home</a>
-          </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="/login">LogIn</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link"  routerLink="/register">Register</a>
-        </li>
-    
-    </ul>
-  </nav>
+    <li class="nav-item">
+      <a class="nav-link" (click)="logout()" *ngIf="router.url==='/buyerPage'||router.url==='/LogOut'">LogOut</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/viewProducts"
+        *ngIf="router.url==='/vendorPage'||router.url==='/viewProducts'">View All Products</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="addQuantity" *ngIf="router.url==='/vendorPage'||router.url==='/addQuantity'">Add
+        Quantity</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="logout()">LogOut</a>
+    </li>
+
+  </ul>
+</nav>
 
 
-  
+<!--   
       <nav class="navbar navbar-expand-sm bg-secondary navbar-dark" *ngIf="flag==true &&  logged=='vendor'">
           <ul class="navbar-nav">
               <li class="nav-item" routerLinkActive="active">
@@ -64,4 +87,4 @@
           <br>
         
   
- 
+  -->

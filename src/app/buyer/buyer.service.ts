@@ -20,9 +20,9 @@ export class BuyerService {
     return this.http.get<Product>("http://localhost:1234/PurchaseOrderMiddle/getProductNameById?productId="+id);
   }
 
-  raisePoForm(poArr:any)
+  raisePoForm(poArr:any,uId:number)
   {
-    return this.http.post<any>("http://localhost:1234/PurchaseOrderMiddle/purchaseOrder",poArr);
+    return this.http.post<any>("http://localhost:1234/PurchaseOrderMiddle/purchaseOrder/"+uId,poArr);
   }
 
 }
