@@ -40,16 +40,21 @@ onSubmitValidate()
   console.log(this.loginForm.value.userEmail,this.loginForm.value.userPass);
   this.authService.validateUser(this.loginForm.value.userEmail,this.loginForm.value.userPass).subscribe(
     data=>{
-      
-      alert("Hello" +data);
-      if(data == 'Seller'){
+      let userObj = data;
+
+      sessionStorage.setItem("uObj",JSON.stringify(userObj));    //session 
+      console.log(userObj.role);
+      if(userObj.role=="Seller"){
+        alert(userObj.role);
       this.router.navigate(['./']);
       }
-      else if(data=='Buyer'){
+      else if(userObj.role=="Buyer"){
+        alert(userObj.role);
         this.router.navigate(['./buyerPage']);
       }
-      else if(data=='Vendor'){
-        this.router.navigate(['vendorPage']);
+      else if(userObj.role=="Vendor"){
+        alert(userObj.role);
+        this.router.navigate(['./vendorPage']);
       }
       else
       {

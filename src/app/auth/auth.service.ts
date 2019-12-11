@@ -20,7 +20,8 @@ export class AuthService {
 
   validateUser(userEmail:any,userPass:any):Observable<any>{
     console.log(userEmail+" "+userPass+"Yooooo");
-    return this.http.post<any>("http://localhost:1234/PurchaseOrderMiddle/uservalidate?userEmail="+userEmail+"&&userPass="+userPass,null,{responseType: 'text' as 'json'});
+    return this.http.post<any>("http://localhost:1234/PurchaseOrderMiddle/uservalidate?userEmail="+
+    userEmail+"&&userPass="+userPass,null);
   }
 
 

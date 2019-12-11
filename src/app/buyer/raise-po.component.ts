@@ -43,10 +43,17 @@ export class RaisePOComponent implements OnInit {
 
     
     this.productsArrToDisplay.push(obj);
+  
 
   }
   deleteRow(){
     this.productsArrToDisplay = this.productsArrToDisplay.filter(item => item.isSelected! === false);
   }
 
+
+  RaisePo(){
+    console.log( this.productsArrToDisplay);
+    this.buyerService.raisePoForm(this.productsArrToDisplay).
+    subscribe(data => console.log(this.productsArrToDisplay));
+  }
 }

@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RaisePOComponent } from './raise-po.component';
+import { BuyerComponent } from './buyer.component';
 
 
 const routes: Routes = [
-  {path:'RaisePo',component:RaisePOComponent},
+  {path:'buyerPage',component:BuyerComponent},
+  {path:'RaisePo',component:RaisePOComponent}
 ];
 
 @NgModule({
