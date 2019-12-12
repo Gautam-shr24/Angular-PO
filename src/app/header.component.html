@@ -12,18 +12,23 @@
     <li class="nav-item" routerLinkActive="active">
       <a class="nav-link" routerLink="/register" *ngIf="router.url==='/'||router.url==='/register'">Register</a>
     </li>
+
+
+
     <li class="nav-item">
-      <a class="nav-link" routerLink="/RaisePo" *ngIf="router.url==='/buyerPage'||router.url==='/RaisePo'"> Raise
+      <a class="nav-link" routerLink="/RaisePo" *ngIf="router.url==='/buyerPage'||router.url==='/RaisePo' || router.url==='/viewAll'"> Raise
         Purchase Order</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/viewAll" *ngIf="router.url==='/buyerPage'||router.url==='/viewAll'"> View All
+      <a class="nav-link" routerLink="/viewAll" *ngIf="router.url==='/buyerPage'||router.url==='/viewAll'||router.url==='/RaisePo'"> View All
         Products</a>
     </li>
 
     <li class="nav-item">
       <a class="nav-link" (click)="logout()" *ngIf="router.url==='/buyerPage'||router.url==='/LogOut'">LogOut</a>
     </li>
+
+
 
     <li class="nav-item">
       <a class="nav-link" routerLink="/viewProducts"
@@ -33,9 +38,7 @@
       <a class="nav-link" routerLink="addQuantity" *ngIf="router.url==='/vendorPage'||router.url==='/addQuantity'">Add
         Quantity</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" (click)="logout()">LogOut</a>
-    </li>
+    
 
   </ul>
 </nav>

@@ -7,6 +7,8 @@ import { ViewAllProductsComponent } from './view-all-products.component';
 import { VendorService } from './vendor.service';
 import {HttpClientModule} from '@angular/common/http';
 import { AddQuantityComponent } from './add-quantity.component'
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -14,7 +16,7 @@ import { AddQuantityComponent } from './add-quantity.component'
   imports: [
     CommonModule,
     VendorRoutingModule,
-    HttpClientModule
+    HttpClientModule,FormsModule
   ],
   exports:[
     VendorComponent,ViewAllProductsComponent,AddQuantityComponent

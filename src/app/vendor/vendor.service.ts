@@ -18,7 +18,10 @@ export class VendorService {
   }
 
 
-  addQuantity(id:number,quant:number):Observable<any>{
-    //return this.http.post<any>(this.url+'/updateProductQuantity?id='+id+"&&quant="+quant);
+  addQuantity(productId:number,quantity:number):Observable<any>{
+    return this.http.post<any>(this.url+'/updateProductQuantity?productId'+productId
+    +"&&quantity="+quantity,null);
   }
 }
+
+

@@ -59,6 +59,7 @@ export class RaisePOComponent implements OnInit {
     console.log( this.productsArrToDisplay+" "+uId);
     this.buyerService.raisePoForm(this.productsArrToDisplay,uId).
     subscribe(data => console.log("Value Added" +this.productsArrToDisplay));
+    alert("Purchase Order Raised");
     window.location.reload(true);
   }
 }
