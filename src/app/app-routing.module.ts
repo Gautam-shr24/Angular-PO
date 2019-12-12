@@ -9,6 +9,7 @@ import { RegisterUserComponent } from './auth/register-user/register-user.compon
 import { ViewAllComponent } from './buyer/view-all.component';
 import { BuyerComponent } from './buyer/buyer.component';
 import { VendorComponent } from './vendor/vendor.component';
+import { SellerComponent } from './seller/seller.component';
 
 
 
@@ -25,6 +26,9 @@ const routes: Routes = [
   {
     path: 'vendorPage',component:VendorComponent
   },
+  {
+    path: 'sellerPage',component:SellerComponent
+  }
 
 
 ];

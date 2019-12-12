@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { BuyerModule } from './buyer/buyer.module';
 import { VendorModule } from './vendor/vendor.module';
+import { SellerModule } from './seller/seller.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { VendorModule } from './vendor/vendor.module';
     ReactiveFormsModule,
     FormsModule,
     BuyerModule,
-    VendorModule
+    VendorModule,
+    SellerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

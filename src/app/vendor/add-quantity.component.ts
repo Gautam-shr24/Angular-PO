@@ -25,8 +25,13 @@ export class AddQuantityComponent implements OnInit {
 addQuantToProducts:Vendor[]=[];
 
   addQuantity(){
+    let uObj=JSON.parse(sessionStorage.getItem("uObj"));
+    let vendorId=uObj.userId;
+
+    console.log('Vendor Id : '+vendorId);
+
     console.log(this.productId+" "+this.quantity);
-    this.vendorService.addQuantity(this.productId,this.quantity).
+    this.vendorService.addQuantity(this.productId,this.quantity,vendorId).
     subscribe(data => console.log("Quantity Added"));
     alert("Quantity Added");
     

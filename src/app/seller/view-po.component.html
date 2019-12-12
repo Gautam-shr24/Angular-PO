@@ -1,0 +1,19 @@
+<div align="center">
+        <h1>Products </h1>
+    <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th>Purchase Order Id</th>
+                <th>Seller Id</th>
+                <th>Buyer Id</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of poArray">
+                <td>{{p.purchaseOrderId}}</td>
+                <td>{{p.buyerObj}}</td>
+                <td>{{p.productPrice}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>

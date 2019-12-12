@@ -32,12 +32,17 @@
 
     <li class="nav-item">
       <a class="nav-link" routerLink="/viewProducts"
-        *ngIf="router.url==='/vendorPage'||router.url==='/viewProducts'">View All Products</a>
+        *ngIf="router.url==='/vendorPage'||router.url==='/viewProducts' ||router.url==='/addQuantity'">View All Products</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="addQuantity" *ngIf="router.url==='/vendorPage'||router.url==='/addQuantity'">Add
+      <a class="nav-link" routerLink="addQuantity" *ngIf="router.url==='/vendorPage'||router.url==='/addQuantity' ||router.url==='/viewProducts'">Add
         Quantity</a>
     </li>
+
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/viewPO"
+          *ngIf="router.url==='/sellerPage'||router.url==='/viewProducts'">View All PO Requests</a>
+      </li>
     
 
   </ul>

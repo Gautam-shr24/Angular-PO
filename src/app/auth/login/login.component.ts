@@ -46,7 +46,7 @@ onSubmitValidate()
       console.log(userObj.role);
       if(userObj.role=="Seller"){
         
-      this.router.navigate(['./']);
+      this.router.navigate(['./sellerPage']);
       }
       else if(userObj.role=="Buyer"){
         
